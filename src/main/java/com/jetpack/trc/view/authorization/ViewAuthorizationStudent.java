@@ -57,8 +57,11 @@ public class ViewAuthorizationStudent {
                 Main.students.get(a).setGradesTestEnglish(new ControllerResults().gradesTestEnglish(Main.students.get(a).getListResultsTestsEnglish()));
             }
         } else if (b == 2) {
-            new ControllerRating().rating(Main.students, Main.students.get(a).getGroup());
-            new ControllerRating().printRating();
+            ControllerRating controllerRating = new ControllerRating(Main.students.get(a).getGroup());
+//            controllerRating.rating(Main.students, Main.students.get(a).getGroup());
+            ControllerRating.rating(controllerRating.getGrades(), 0, controllerRating.getGrades().size()-1);
+//            controllerRating.rating(Main.students, Main.students.get(a).getGroup());
+            controllerRating.printRating();
         } else {
             System.exit(0);
         }

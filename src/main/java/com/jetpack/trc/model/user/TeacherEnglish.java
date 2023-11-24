@@ -13,7 +13,8 @@ public class TeacherEnglish /*extends Teacher */ {
     private Map<Integer, List<Integer>> resultsTest1English;
     private Map<Integer, List<Integer>> resultsTest2English;
     private Map<Integer, List<Integer>> resultsTest3English;
-    private List<Map> totalResult;
+//    private List<Map> totalResult;
+    private List<Map<Integer, List<Integer>>> totalResult;
 
     public TeacherEnglish(int ID, String name, String surname) {
         this.ID = ID;
@@ -42,13 +43,16 @@ public class TeacherEnglish /*extends Teacher */ {
             List<Integer> keys = new ArrayList<>();
             keys.addAll(totalResult.get(k).keySet());
 
-            List<int[]> values = new ArrayList<>();
+//            List<int[]> values = new ArrayList<>();
+            List<List<Integer>> values = new ArrayList<>();
             values.addAll(totalResult.get(k).values());
 
             for (int i = 0; i < keys.size(); i++) {
                 System.out.print("тест номер " + (k + 1) + " студента, ID которого: " + keys.get(i) + ": результаты ");
-                for (int n = 0; n < values.get(i).length; n++) {
-                    System.out.print(values.get(i)[n]);
+//                for (int n = 0; n < values.get(i).length; n++) {
+                for (int n = 0; n < values.get(i).size(); n++) {
+//                    System.out.print(values.get(i)[n]);
+                    System.out.print(values.get(i).get(n));
                 }
                 System.out.println();
             }

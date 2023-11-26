@@ -4,6 +4,7 @@ package com.jetpack.trc.view.authorization;
 
 import com.jetpack.trc.Main;
 import com.jetpack.trc.controller.ControllerTeacherEnglish;
+import com.jetpack.trc.model.exception.IdException;
 import com.jetpack.trc.model.tests.TestsEnglish;
 import com.jetpack.trc.model.user.TeacherEnglish;
 import com.jetpack.trc.model.user.TeacherMath;
@@ -18,6 +19,9 @@ public class ViewAuthorizationTeacherEnglish {
         System.out.println("Введите Ваш ID");
         scanner = new Scanner(System.in);
         int a = scanner.nextInt();
+        if(Main.teacherEnglish.size()<a || a<=0){
+            throw new IdException();
+        }
         System.out.println(controllerTeacherEnglish.printResult(a));
         System.out.println("Успеваемость Ваших студентов:");
         Main.teacherEnglish.get(a-1).toStringResults();

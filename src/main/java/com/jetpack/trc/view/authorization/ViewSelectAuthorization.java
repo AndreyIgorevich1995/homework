@@ -1,5 +1,7 @@
 package com.jetpack.trc.view.authorization;
 
+import com.jetpack.trc.model.exception.FalseAuthorizationException;
+import com.jetpack.trc.model.exception.FalseStartException;
 import com.jetpack.trc.model.user.TeacherMath;
 
 import java.util.Scanner;
@@ -26,9 +28,10 @@ public class ViewSelectAuthorization {
             new ViewAuthorizationTeacherEnglish();
         } else if (a == 3) {
             new ViewAuthorizationTeacherMath();
-
         } else if (a == 4) {
             new ViewAuthorizationAdministrator();
+        }else {
+            throw new FalseAuthorizationException(a);
         }
     }
 }

@@ -3,6 +3,7 @@ package com.jetpack.trc.view;
 //import view.authorization.ViewSelectAuthorization;
 //import view.registration.RegistrationResult;
 
+import com.jetpack.trc.model.exception.FalseStartException;
 import com.jetpack.trc.view.authorization.ViewSelectAuthorization;
 import com.jetpack.trc.view.registration.RegistrationResult;
 
@@ -28,6 +29,8 @@ public class View {
             new ViewSelectAuthorization();
         } else if(a == 2){
             new RegistrationResult();
+        } else {
+            throw new FalseStartException(a);
         }
 //        else {
 //            new Exception();

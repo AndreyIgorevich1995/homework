@@ -12,6 +12,7 @@ package com.jetpack.trc.view.registration;
 //import java.awt.event.WindowListener;
 
 import com.jetpack.trc.Main;
+import com.jetpack.trc.model.exception.FalseAuthorizationException;
 import com.jetpack.trc.model.user.Administrator;
 //import com.jetpack.trc.model.user.Teacher;
 import com.jetpack.trc.model.user.TeacherEnglish;
@@ -34,6 +35,7 @@ public class RegistrationResult {
         System.out.println("4 - Administrator");
         scanner = new Scanner(System.in);
         int a = scanner.nextInt();
+
         if (a == 1) {
             new RegistrationResultStudent();
         } else if (a == 2) {
@@ -42,6 +44,8 @@ public class RegistrationResult {
             new RegistrationResultTeacherMath();
         } else if (a == 4) {
             new RegistrationResultAdministrator();
+        }else {
+            throw new FalseAuthorizationException(a);
         }
     }
 }

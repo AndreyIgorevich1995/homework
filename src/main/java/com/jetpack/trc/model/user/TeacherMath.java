@@ -5,7 +5,7 @@ import com.jetpack.trc.controller.ControllerResults;
 
 import java.util.*;
 
-public class TeacherMath /*extends Teacher */{
+public class TeacherMath {
     private String name;
     private String surname;
     private int ID;
@@ -18,7 +18,6 @@ public class TeacherMath /*extends Teacher */{
         this.ID = ID;
         this.name = name;
         this.surname = surname;
-//        super(ID, name, surname);
         for (int i = 1; i <= Main.students.size(); i++) {
             List<Integer> x = new ArrayList<>();
 
@@ -30,15 +29,6 @@ public class TeacherMath /*extends Teacher */{
 
             List<Integer> y3 = new ArrayList<>();
             y1 = Main.students.get(i).getResultsTestMath3();
-
-//            int[] y1 = new int[Main.students.get(i).getResultsTestMath1().length];
-//            y1 = Main.students.get(i).getResultsTestMath1();
-//
-//            int[] y2 = new int[Main.students.get(i).getResultsTestMath2().length];
-//            y2 = Main.students.get(i).getResultsTestMath2();
-//
-//            int[] y3 = new int[Main.students.get(i).getResultsTestMath3().length];
-//            y3 = Main.students.get(i).getResultsTestMath3();
 
             for (int j = 1; j <= Main.students.size(); j++) {
                 x.add(Main.students.get(j).getID());

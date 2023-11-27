@@ -3,6 +3,9 @@ package com.jetpack.trc.controller;
 import com.jetpack.trc.Main;
 
 public class ControllerTeacherMath {
+    /**
+     * here the TeacherMath returns with ID = x
+     */
     public String printResult(int x) {
         Object object = new Object();
         for (int i = 0; i < Main.teacherMaths.size(); i++) {

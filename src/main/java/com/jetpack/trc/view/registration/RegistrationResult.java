@@ -1,32 +1,18 @@
 package com.jetpack.trc.view.registration;
-//import com.jetpack.trc.Main;
-//import model.Administrator;
-//import model.Teacher;
-//import model.User;
-//
-//import javax.swing.*;
-//import java.awt.*;
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
-//import java.awt.event.WindowEvent;
-//import java.awt.event.WindowListener;
 
-import com.jetpack.trc.Main;
 import com.jetpack.trc.model.exception.FalseAuthorizationException;
-import com.jetpack.trc.model.user.Administrator;
-//import com.jetpack.trc.model.user.Teacher;
-import com.jetpack.trc.model.user.TeacherEnglish;
-import com.jetpack.trc.model.user.TeacherMath;
 
 import java.util.Scanner;
 
 public class RegistrationResult {
-    //    private JLabel info;
-//    private JButton teacher;
-//    private JButton student;
-//    private JButton administrator;
     private Scanner scanner;
-
+    /**
+     * if a student choose 1
+     * if the English teacher choose 2
+     * if the math teacher choose 3
+     * if admin choose 4
+     * @throws FalseAuthorizationException if you don't press either 1, 2, 3 or 4
+     */
     public RegistrationResult() {
         System.out.println("Выберите Ваш статус");
         System.out.println("1 - Student");
@@ -35,7 +21,6 @@ public class RegistrationResult {
         System.out.println("4 - Administrator");
         scanner = new Scanner(System.in);
         int a = scanner.nextInt();
-
         if (a == 1) {
             new RegistrationResultStudent();
         } else if (a == 2) {
@@ -44,8 +29,15 @@ public class RegistrationResult {
             new RegistrationResultTeacherMath();
         } else if (a == 4) {
             new RegistrationResultAdministrator();
-        }else {
-            throw new FalseAuthorizationException(a);
+        } else {
+            try {
+                throw new FalseAuthorizationException(a);
+            } catch (FalseAuthorizationException e) {
+                System.out.println("Надо было ввести 1, 2, 3 или 4. Было введено : " + a);
+                System.out.println();
+                new RegistrationResult();
+            }
+
         }
     }
 }

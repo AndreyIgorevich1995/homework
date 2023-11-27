@@ -11,9 +11,15 @@ public class RegistrationResultTeacherMath {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите Ваше имя");
+        /**
+         * variable "name" is your name
+         */
         String name = scanner.nextLine();
 
         System.out.println("Введите Вашу фамилию");
+        /**
+         * variable "surName" is your surName
+         */
         String surName = scanner.nextLine();
 
         Main.teacherMaths.add(new TeacherMath(Main.teacherMaths.size() + 1, name, surName));

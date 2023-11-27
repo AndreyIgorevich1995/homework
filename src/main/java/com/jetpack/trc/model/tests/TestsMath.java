@@ -1,11 +1,8 @@
 package com.jetpack.trc.model.tests;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
-//public class TestsMath extends Tests {
 public class TestsMath {
     private static String[] Tests = {"Сумма", "Произведение", "Частное"};
 
@@ -18,14 +15,6 @@ public class TestsMath {
     private static String[] Answers2 = {"10", "400", "50", "100"};         //массив ответов
     private static String[] Answers3 = {"6", "7", "7", "11"};         //массив ответов
     private static List<String[]> listAnswers = Arrays.asList(Answers1, Answers2, Answers3);
-//private static int[] Answers1 = {4, 6, 156, 22};         //массив ответов
-//    private static int[] Answers2 = {10, 400, 50, 100};         //массив ответов
-//    private static int[] Answers3 = {6, 7, 7, 11};         //массив ответов
-//    private static List<int[]> listAnswers = Arrays.asList(Answers1, Answers2, Answers3);
-
-//    public TestsMath(float resultsTest, int grade) {
-//        super(resultsTest, grade);
-//    }
 
     public TestsMath() {
     }

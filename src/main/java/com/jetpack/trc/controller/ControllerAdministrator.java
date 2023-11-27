@@ -5,6 +5,9 @@ import com.jetpack.trc.Main;
 public class ControllerAdministrator {
     public String printResult(int x) {
         StringBuilder a = new StringBuilder();
+        /**
+         * variable "a" is List of all users
+         */
         a.append("Список студентов");
         a.append("\n");
         for (int i = 0; i < Main.students.size(); i++) {

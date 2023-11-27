@@ -6,7 +6,9 @@ import com.jetpack.trc.model.tests.TestsMath;
 import java.util.*;
 
 public class ControllerResults {
-
+    /**
+     * here is a list of test results in English
+     */
     public Map<Integer, List<Integer>> resultsTestEnglish(List<Integer> id, List<Integer> a) {
         Map<Integer, List<Integer>> map = new HashMap<>();
         for (int i = 0; i < id.size(); i++) {
@@ -15,6 +17,9 @@ public class ControllerResults {
         return map;
     }
 
+    /**
+     * here is a list of test results in Math
+     */
     public Map<Integer, List<Integer>> resultsTestMath(List<Integer> id, List<Integer> a) {
         Map<Integer, List<Integer>> map = new HashMap<>();
         for (int i = 0; i < id.size(); i++) {
@@ -23,6 +28,9 @@ public class ControllerResults {
         return map;
     }
 
+    /**
+     * here is a list of grades for Math tests
+     */
     public List<Integer> gradesTestMath(List<List<Integer>> listResultsTests) {
         List<Integer> grades = new ArrayList<>();
         for (int i = 0; i < listResultsTests.size(); i++) {
@@ -44,6 +52,9 @@ public class ControllerResults {
         return grades;
     }
 
+    /**
+     * here is a list of grades for English tests
+     */
     public List<Integer> gradesTestEnglish(List<List<Integer>> listResultsTests) {
         List<Integer> grades = new ArrayList<>();
         for (int i = 0; i < listResultsTests.size(); i++) {
@@ -68,6 +79,9 @@ public class ControllerResults {
         return grades;
     }
 
+    /**
+     * here formed rating
+     */
     public float rating(List<List<Integer>> gradesTest) {
         float rating;
         float sum = 0;

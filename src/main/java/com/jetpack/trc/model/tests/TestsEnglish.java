@@ -3,7 +3,6 @@ package com.jetpack.trc.model.tests;
 import java.util.Arrays;
 import java.util.List;
 
-//public class TestsEnglish extends Tests {
 public class TestsEnglish {
     private static String[] Tests = {"Местоимения личные", "Местоимения указательные", "Существительные"};
 
@@ -17,9 +16,6 @@ public class TestsEnglish {
     private static String[] Answers3 = {"City", "Country", "River", "Mountain"};         //массив ответов
     private static List<String[]> listAnswers = Arrays.asList(Answers1, Answers2, Answers3);
 
-//    public TestsEnglish(float resultsTest, int grade) {
-//        super(resultsTest, grade);
-//    }
 
     public TestsEnglish() {
     }

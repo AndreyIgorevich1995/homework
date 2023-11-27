@@ -2,7 +2,6 @@ package com.jetpack.trc.model.user;
 
 import com.jetpack.trc.Main;
 import com.jetpack.trc.controller.ControllerResults;
-import com.jetpack.trc.model.tests.TestsEnglish;
 
 import java.util.*;
 
@@ -13,14 +12,12 @@ public class TeacherEnglish /*extends Teacher */ {
     private Map<Integer, List<Integer>> resultsTest1English;
     private Map<Integer, List<Integer>> resultsTest2English;
     private Map<Integer, List<Integer>> resultsTest3English;
-//    private List<Map> totalResult;
     private List<Map<Integer, List<Integer>>> totalResult;
 
     public TeacherEnglish(int ID, String name, String surname) {
         this.ID = ID;
         this.name = name;
         this.surname = surname;
-//        super(ID, name, surname);
         for (int i = 1; i <= Main.students.size(); i++) {
             List<Integer> x = new ArrayList<>();
 
@@ -43,7 +40,6 @@ public class TeacherEnglish /*extends Teacher */ {
             List<Integer> keys = new ArrayList<>();
             keys.addAll(totalResult.get(k).keySet());
 
-//            List<int[]> values = new ArrayList<>();
             List<List<Integer>> values = new ArrayList<>();
             values.addAll(totalResult.get(k).values());
 
